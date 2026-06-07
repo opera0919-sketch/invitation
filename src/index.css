@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  background: #e9e4dc;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 청첩장은 모바일 세로 한 장 느낌 — 데스크톱에서도 폰 폭으로 가운데 정렬 */
+#root {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #faf7f2;
+  min-height: 100vh;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+  overflow-x: hidden;
+}
+
+/* 스크롤 진입 애니메이션 (IntersectionObserver와 연동) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
