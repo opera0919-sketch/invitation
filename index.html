@@ -31,6 +31,39 @@
         이 청첩장을 보려면 자바스크립트를 켜주세요.
       </p>
     </noscript>
+
+    <!-- 임시 진단: JS 에러/로딩 실패를 화면에 표시 (원인 확인 후 제거 예정) -->
+    <script>
+      (function () {
+        function show(msg) {
+          var r = document.getElementById('root')
+          if (r)
+            r.innerHTML =
+              '<div style="padding:24px;color:#ff9b9b;font:13px/1.6 system-ui;white-space:pre-wrap;word-break:break-all">진단: ' +
+              msg +
+              '</div>'
+        }
+        window.addEventListener('error', function (e) {
+          show((e.message || 'error') + '\n' + (e.filename || '') + ':' + (e.lineno || ''))
+        })
+        window.addEventListener('unhandledrejection', function (e) {
+          show('promise: ' + (e.reason && (e.reason.message || e.reason)))
+        })
+        // 4초 안에 앱이 안 뜨면 JS 파일 로드 상태를 직접 점검
+        setTimeout(function () {
+          var r = document.getElementById('root')
+          if (r && r.textContent.indexOf('L O A D I N G') !== -1) {
+            fetch('/invitation/assets/index-C0zwq0W0.js', { method: 'HEAD' })
+              .then(function (res) {
+                show('JS 파일 응답 코드: ' + res.status + ' (' + res.url + ')')
+              })
+              .catch(function (err) {
+                show('JS fetch 실패: ' + err)
+              })
+          }
+        }, 4000)
+      })()
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
