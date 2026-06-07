@@ -7,6 +7,8 @@ body {
   margin: 0;
   background: #e9e4dc;
   -webkit-tap-highlight-color: transparent;
+  /* 위로 당겼을 때(오버스크롤) 메인 사진이 늘어나/확대되는 바운스 방지 */
+  overscroll-behavior-y: none;
 }
 
 /* 청첩장은 모바일 세로 한 장 느낌 — 데스크톱에서도 폰 폭으로 가운데 정렬 */
