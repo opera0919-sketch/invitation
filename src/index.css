@@ -5,31 +5,18 @@
 html,
 body {
   margin: 0;
-  background: #000;
+  background: #0f0f0f;
   -webkit-tap-highlight-color: transparent;
-  /* 위로 당겼을 때(오버스크롤) 메인 사진이 늘어나/확대되는 바운스 방지 */
   overscroll-behavior-y: none;
 }
 
-/* 청첩장은 모바일 세로 한 장 느낌 — 데스크톱에서도 폰 폭으로 가운데 정렬 */
+/* 유튜브 모바일 앱 느낌 — 폰 폭으로 가운데 정렬 */
 #root {
   max-width: 480px;
   margin: 0 auto;
-  background: #0e0e11;
+  background: #fff;
   min-height: 100vh;
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
-}
-
-/* 스크롤 진입 애니메이션 (IntersectionObserver와 연동) */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 ::-webkit-scrollbar {

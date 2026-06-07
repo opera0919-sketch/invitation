@@ -59,4 +59,14 @@ export const wedding = {
   // 카카오톡 공유 썸네일 — 부케 사진
   kakaoThumb:
     'https://images.unsplash.com/photo-1561593366-a05a3eaa72eb?w=800&q=80',
+
+  // ── YouTube watch 레이아웃용 메타 ──
+  yt: {
+    videoTitle: '재경 ♥ 유나의 결혼식에 초대합니다 💍',
+    channelName: '재경 ❤ 유나',
+    channelHandle: '@jaekyung.yuna',
+    subscribers: '양가 가족 일동',
+    // 채널 프로필(신랑신부) 아바타
+    avatar: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=200&q=80',
+  },
 }
