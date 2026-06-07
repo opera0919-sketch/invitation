@@ -17,8 +17,20 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
     />
   </head>
-  <body>
-    <div id="root"></div>
+  <body style="margin: 0; background: #0e0e11">
+    <div id="root">
+      <!-- JS 로드 전 폴백: 흰 화면이면 HTML 자체가 안 뜬 것, 이 문구가 보이면 JS 문제 -->
+      <div style="
+        display:flex;min-height:100vh;align-items:center;justify-content:center;
+        color:#e2cb97;font-family:system-ui,sans-serif;letter-spacing:.3em;font-size:13px;">
+        L O A D I N G
+      </div>
+    </div>
+    <noscript>
+      <p style="color:#ece7dd;text-align:center;padding:24px;font-family:system-ui">
+        이 청첩장을 보려면 자바스크립트를 켜주세요.
+      </p>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
