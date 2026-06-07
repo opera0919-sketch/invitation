@@ -34,7 +34,7 @@ export default function Calendar() {
     <Section label="Save the Date" title={wedding.date.text} className="bg-ecru/40">
       <p className="reveal text-center font-serif text-sage-deep -mt-6 mb-8">{wedding.date.time}</p>
 
-      <div className="reveal mx-auto max-w-[300px] rounded-2xl bg-white/70 p-5 shadow-sm">
+      <div className="reveal mx-auto max-w-[300px] rounded-2xl bg-surface p-5 shadow-sm">
         <div className="grid grid-cols-7 gap-y-2 text-center">
           {weekdays.map((w, i) => (
             <div
@@ -51,7 +51,7 @@ export default function Calendar() {
                 key={i}
                 className={`mx-auto flex h-8 w-8 items-center justify-center rounded-full font-serif text-sm
                   ${i % 7 === 0 ? 'text-rose-400' : 'text-ink'}
-                  ${isDay ? 'bg-sage text-white font-bold shadow' : ''}`}
+                  ${isDay ? 'bg-sage text-on-gold font-bold shadow' : ''}`}
               >
                 {c || ''}
               </div>
@@ -67,7 +67,7 @@ export default function Calendar() {
           ['MIN', dday.m],
           ['SEC', dday.s],
         ].map(([label, v]) => (
-          <div key={label} className="rounded-xl bg-white/70 px-3 py-2 shadow-sm">
+          <div key={label} className="rounded-xl bg-surface px-3 py-2 shadow-sm">
             <div className="font-serif text-xl text-sage-deep tabular-nums">
               {String(Math.max(0, v)).padStart(2, '0')}
             </div>

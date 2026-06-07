@@ -21,20 +21,20 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-sage-deep px-7 py-14 text-center text-white">
-      <p className="font-serif text-xl">
-        {wedding.groom.short} <span className="mx-2">♥</span> {wedding.bride.short}
+    <footer className="border-t border-ecru bg-surface px-7 py-16 text-center">
+      <p className="font-serif text-2xl font-light tracking-wide text-ink">
+        {wedding.groom.short} <span className="mx-2 text-sage">&</span> {wedding.bride.short}
       </p>
-      <p className="mt-2 font-sans text-sm text-white/80">
+      <p className="mt-3 font-sans text-sm font-light text-muted">
         {wedding.date.text} {wedding.date.time}
       </p>
       <button
         onClick={share}
-        className="mt-8 rounded-full bg-white/15 px-8 py-3 font-sans text-sm backdrop-blur active:scale-95"
+        className="mt-9 rounded-full border border-sage/50 px-8 py-3 font-sans text-sm text-sage-deep transition active:scale-95"
       >
-        💌 청첩장 공유하기
+        청첩장 공유하기
       </button>
-      <p className="mt-10 font-sans text-[11px] tracking-widest text-white/50">
+      <p className="mt-12 font-sans text-[10px] tracking-[0.3em] text-muted/60">
         THANK YOU FOR CELEBRATING WITH US
       </p>
     </footer>

@@ -38,7 +38,7 @@ export default function Rsvp() {
 
   const chip = (active) =>
     `flex-1 rounded-xl py-2.5 font-sans text-sm transition ${
-      active ? 'bg-sage text-white shadow' : 'bg-white/70 text-muted'
+      active ? 'bg-sage text-on-gold shadow' : 'bg-surface text-muted'
     }`
 
   return (
@@ -67,7 +67,7 @@ export default function Rsvp() {
           value={form.name}
           onChange={set('name')}
           placeholder="성함"
-          className="w-full rounded-xl border border-ecru bg-white/70 px-4 py-3 font-sans text-sm outline-none focus:border-sage"
+          className="w-full rounded-xl border border-ecru bg-surface px-4 py-3 font-sans text-sm outline-none focus:border-sage"
         />
 
         <div className="flex gap-2">
@@ -91,7 +91,7 @@ export default function Rsvp() {
             <select
               value={form.count}
               onChange={set('count')}
-              className="flex-1 rounded-xl border border-ecru bg-white/70 px-4 py-3 font-sans text-sm outline-none"
+              className="flex-1 rounded-xl border border-ecru bg-surface px-4 py-3 font-sans text-sm outline-none"
             >
               {[1, 2, 3, 4, 5].map((n) => (
                 <option key={n} value={n}>
@@ -102,7 +102,7 @@ export default function Rsvp() {
             <select
               value={form.meal}
               onChange={set('meal')}
-              className="flex-1 rounded-xl border border-ecru bg-white/70 px-4 py-3 font-sans text-sm outline-none"
+              className="flex-1 rounded-xl border border-ecru bg-surface px-4 py-3 font-sans text-sm outline-none"
             >
               <option>식사함</option>
               <option>식사안함</option>
@@ -114,7 +114,7 @@ export default function Rsvp() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-xl bg-sage-deep py-3.5 font-sans text-sm font-bold text-white shadow active:scale-[0.98] disabled:opacity-60"
+          className="w-full rounded-xl bg-sage py-3.5 font-sans text-sm font-bold text-on-gold shadow active:scale-[0.98] disabled:opacity-60"
         >
           {loading ? '전송 중…' : '참석 의사 전달하기'}
         </button>

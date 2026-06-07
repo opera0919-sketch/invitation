@@ -38,7 +38,7 @@ export default function Location() {
             href={a.url}
             target="_blank"
             rel="noreferrer"
-            className="rounded-xl bg-white/80 py-3 text-center font-sans text-sm text-ink shadow-sm active:scale-95"
+            className="rounded-xl bg-surface py-3 text-center font-sans text-sm text-ink shadow-sm active:scale-95"
           >
             {a.name}
           </a>

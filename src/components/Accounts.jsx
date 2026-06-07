@@ -28,7 +28,7 @@ export default function Accounts() {
           const a = g.person.account
           const isOpen = open === i
           return (
-            <div key={g.label} className="overflow-hidden rounded-xl bg-white/70 shadow-sm">
+            <div key={g.label} className="overflow-hidden rounded-xl bg-surface shadow-sm">
               <button
                 onClick={() => setOpen(isOpen ? null : i)}
                 className="flex w-full items-center justify-between px-5 py-4 font-sans text-sm text-ink"

@@ -4,17 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        // 뉴트럴 + 세이지 포인트 (요즘 트렌드 톤)
-        cream: '#FAF7F2',
-        ecru: '#F1EBE2',
-        sage: '#9CAF94',
-        'sage-deep': '#6E8268',
-        ink: '#3A3631',
-        muted: '#8C857B',
+        // 다크 프리미엄 — 차콜 베이스 + 골드 포인트 + 아이보리 텍스트
+        cream: '#0E0E11', // 페이지 베이스
+        ecru: '#2A2A31', // 보더 / 섹션 틴트
+        surface: '#17171B', // 카드 표면
+        surface2: '#1F1F25', // 입력/강조 표면
+        sage: '#C9A86A', // 골드 액센트
+        'sage-deep': '#E2CB97', // 라이트 골드 (라벨/링크)
+        gold: '#C9A86A',
+        'on-gold': '#16140E', // 골드 위 텍스트
+        ink: '#ECE7DD', // 기본 아이보리 텍스트
+        muted: '#8B8579',
       },
       fontFamily: {
-        serif: ['"Gowun Batang"', 'serif'],
-        sans: ['"Gowun Dodum"', 'sans-serif'],
+        // 모던 산세리프 (Pretendard)
+        serif: ['Pretendard', 'system-ui', 'sans-serif'],
+        sans: ['Pretendard', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         fadeUp: {

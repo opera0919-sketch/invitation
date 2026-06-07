@@ -30,19 +30,19 @@ export default function Guestbook() {
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
           placeholder="이름"
-          className="w-full rounded-xl border border-ecru bg-white/70 px-4 py-3 font-sans text-sm outline-none focus:border-sage"
+          className="w-full rounded-xl border border-ecru bg-surface px-4 py-3 font-sans text-sm outline-none focus:border-sage"
         />
         <textarea
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           placeholder="따뜻한 축하의 말을 남겨주세요."
           rows={3}
-          className="w-full resize-none rounded-xl border border-ecru bg-white/70 px-4 py-3 font-sans text-sm outline-none focus:border-sage"
+          className="w-full resize-none rounded-xl border border-ecru bg-surface px-4 py-3 font-sans text-sm outline-none focus:border-sage"
         />
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-xl bg-sage-deep py-3 font-sans text-sm font-bold text-white shadow active:scale-[0.98] disabled:opacity-60"
+          className="w-full rounded-xl bg-sage py-3 font-sans text-sm font-bold text-on-gold shadow active:scale-[0.98] disabled:opacity-60"
         >
           {loading ? '등록 중…' : '메시지 남기기'}
         </button>

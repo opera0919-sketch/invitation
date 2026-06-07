@@ -5,7 +5,7 @@
 html,
 body {
   margin: 0;
-  background: #e9e4dc;
+  background: #000;
   -webkit-tap-highlight-color: transparent;
   /* 위로 당겼을 때(오버스크롤) 메인 사진이 늘어나/확대되는 바운스 방지 */
   overscroll-behavior-y: none;
@@ -15,9 +15,9 @@ body {
 #root {
   max-width: 480px;
   margin: 0 auto;
-  background: #faf7f2;
+  background: #0e0e11;
   min-height: 100vh;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
   overflow-x: hidden;
 }
 
